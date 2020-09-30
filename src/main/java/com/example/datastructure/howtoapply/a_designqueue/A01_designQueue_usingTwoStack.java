@@ -1,4 +1,4 @@
-package howtoapply.a_designqueue;
+package com.example.datastructure.howtoapply.a_designqueue;
 
 import java.util.Stack;
 
@@ -8,8 +8,8 @@ import java.util.Stack;
  * Implement Queue using Stacks
  * *****************************************************************************
  */
-public class A03_designQueue_usingOneStack_2 {
-	private static A03_designQueue_usingOneStack_2 obj = new A03_designQueue_usingOneStack_2();
+public class A01_designQueue_usingTwoStack {
+	private static A01_designQueue_usingTwoStack obj = new A01_designQueue_usingTwoStack();
 	
 	public static void main(String[] args) {
 		Stack<Integer> stack = new Stack<Integer>();
@@ -33,20 +33,19 @@ public class A03_designQueue_usingOneStack_2 {
 	
 	
 	
+	private final Stack<Integer> stack2 = new Stack<Integer>();
+	
 	private void enqueue(Stack<Integer> stack, int elem) {
 		stack.push(elem);
 	}
-	/* recursive function which returns */
 	private int dequeue(Stack<Integer> stack) {
-		int badElement;
-		if(stack.size() == 1) {
-			return stack.pop();
+		while(stack.size() != 1) {
+			stack2.push(stack.pop());
 		}
-		else {
-			int temp = stack.pop();
-			badElement = dequeue(stack);
-			stack.push(temp);
-			return badElement;
+		int badElement = stack.pop();
+		while(!stack2.isEmpty()) {
+			stack.push(stack2.pop());
 		}
+		return badElement;
 	}
 }

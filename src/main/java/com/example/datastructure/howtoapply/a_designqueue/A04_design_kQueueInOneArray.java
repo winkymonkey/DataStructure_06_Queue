@@ -1,4 +1,4 @@
-package howtoapply.a_designqueue;
+package com.example.datastructure.howtoapply.a_designqueue;
 
 /**
  * *****************************************************************************

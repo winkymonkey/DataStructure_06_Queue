@@ -1,4 +1,4 @@
-package howtoapply.b_misc;
+package com.example.datastructure.howtoapply.b_misc;
 
 /**
  * *****************************************************************************

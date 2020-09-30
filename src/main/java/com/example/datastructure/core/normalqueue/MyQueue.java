@@ -1,4 +1,4 @@
-package core.normalqueue;
+package com.example.datastructure.core.normalqueue;
 
 public class MyQueue {
 	private static final int SIZE = 5;

@@ -1,4 +1,4 @@
-package howtoapply.a_designqueue;
+package com.example.datastructure.howtoapply.a_designqueue;
 
 import java.util.Stack;
 
@@ -8,8 +8,8 @@ import java.util.Stack;
  * Implement Queue using Stacks
  * *****************************************************************************
  */
-public class A02_designQueue_usingOneStack_1 {
-	private static A02_designQueue_usingOneStack_1 obj = new A02_designQueue_usingOneStack_1();
+public class A03_designQueue_usingOneStack_2 {
+	private static A03_designQueue_usingOneStack_2 obj = new A03_designQueue_usingOneStack_2();
 	
 	public static void main(String[] args) {
 		Stack<Integer> stack = new Stack<Integer>();
@@ -19,7 +19,7 @@ public class A02_designQueue_usingOneStack_1 {
 		obj.enqueue(stack, 30);
 		System.out.println(stack);
 		
-		obj.dequeue(stack);
+		System.out.println(obj.dequeue(stack));
 		System.out.println(stack);
 		
 		obj.enqueue(stack, 40);
@@ -27,7 +27,7 @@ public class A02_designQueue_usingOneStack_1 {
 		obj.enqueue(stack, 50);
 		System.out.println(stack);
 		
-		obj.dequeue(stack);
+		System.out.println(obj.dequeue(stack));
 		System.out.println(stack);
 	}
 	
@@ -36,14 +36,17 @@ public class A02_designQueue_usingOneStack_1 {
 	private void enqueue(Stack<Integer> stack, int elem) {
 		stack.push(elem);
 	}
-	/* recursive function which doesn't return */
-	private void dequeue(Stack<Integer> stack) {
+	/* recursive function which returns */
+	private int dequeue(Stack<Integer> stack) {
+		int badElement;
 		if(stack.size() == 1) {
-			stack.pop();
-			return;
+			return stack.pop();
 		}
-		int temp = stack.pop();
-		dequeue(stack);
-		stack.push(temp);
+		else {
+			int temp = stack.pop();
+			badElement = dequeue(stack);
+			stack.push(temp);
+			return badElement;
+		}
 	}
 }

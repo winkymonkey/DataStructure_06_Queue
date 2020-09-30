@@ -1,4 +1,4 @@
-package core.circularqueue;
+package com.example.datastructure.core.circularqueue;
 
 public class MyCircularQueue {
 	private static final int SIZE = 10;

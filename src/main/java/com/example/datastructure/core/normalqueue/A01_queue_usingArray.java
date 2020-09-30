@@ -1,8 +1,8 @@
-package core.circularqueue;
+package com.example.datastructure.core.normalqueue;
 
-public class A01_circularQueue_usingArray {
+public class A01_queue_usingArray {
 	public static void main(String[] args) {
-		MyCircularQueue queue = new MyCircularQueue();
+		MyQueue queue = new MyQueue();
 		
 		queue.enQueue(10);
 		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
@@ -10,7 +10,16 @@ public class A01_circularQueue_usingArray {
 		queue.enQueue(20);
 		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
 		
-		queue.enQueue(70);
+		queue.enQueue(30);
+		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
+		
+		queue.enQueue(40);
+		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
+		
+		queue.enQueue(50);
+		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
+		
+		queue.enQueue(60);
 		System.out.println(queue + "---front:"+queue.front() + "---rear:"+queue.rear());
 		
 		queue.deQueue();
