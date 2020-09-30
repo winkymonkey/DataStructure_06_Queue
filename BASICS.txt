@@ -1,0 +1,92 @@
+------------------------------------
+Queue is a linear data structure which follows FIFO pattern in which the operations are performed.
+------------------------------------
+Basic operations in Queue
+>Enqueue
+	Adds an item in the Queue. 
+	If the Queue is full, then it is said to be an Overflow condition.
+	
+>Dequeue
+	Removes an item from the Queue.
+	The items are removed in the same order in which they are added.
+	If the Queue is empty, then it is said to be an Underflow condition.
+ 	
+>Front
+	Get the front item from queue.
+	
+>Rear
+	Get the last item from queue.
+	
+------------------------------------
+Queue can be implemented
+ - using Array
+ - using LinkedList
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+Priority Queue is an extension of queue having below properties.
+ - Every item has a priority associated with it.
+ - An element with high priority is dequeued before an element with low priority.
+ - If two elements have the same priority, they are served according to their order in the queue.
+
+------------------------------------
+Basic operations in Priority Queue
+>insert(item, priority)
+	Inserts an item with given priority.
+	
+>getHighestPriority()
+	Returns the highest priority item.
+	
+>deleteHighestPriority()
+	Removes the highest priority item.
+	
+------------------------------------
+Priority Queue can be implemented
+ - Array
+ - LinkedList
+ - Heaps (it's preferred)
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+Deque (Double Ended Queue) is a generalized version of Queue data structure that allows insert and delete at both ends.
+
+------------------------------------
+Basic operations in Deque
+>insertFront()
+	Adds an item at the front of Deque.
+	
+>insertLast()
+	Adds an item at the rear of Deque.
+	
+>deleteFront()
+	Deletes an item from front of Deque.
+	
+>deleteLast()
+	Deletes an item from rear of Deque.
+	
+>getFront()
+	Gets the front item from queue.
+	
+>getRear()
+	Gets the last item from queue.
+	
+>isEmpty()
+	Checks whether Deque is empty or not.
+	
+>isFull()
+	Checks whether Deque is full or not.
+	
+------------------------------------
+A Deque can be implemented
+ - Double Linked List
+ - Circular Array
+
+
+
+
+
+
