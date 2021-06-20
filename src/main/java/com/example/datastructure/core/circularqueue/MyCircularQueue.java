@@ -76,7 +76,7 @@ public class MyCircularQueue {
 		StringBuilder builder = new StringBuilder();
         builder.append('[');
         
-        for(int i=front; ;i++) {
+        for (int i=front; ;i++) {
         	builder.append(A[i]);
         	if(i == rear)
                 return builder.append(']').toString();

@@ -39,11 +39,11 @@ public class A01_designQueue_usingTwoStack {
 		stack.push(elem);
 	}
 	private int dequeue(Stack<Integer> stack) {
-		while(stack.size() != 1) {
+		while (stack.size() != 1) {
 			stack2.push(stack.pop());
 		}
 		int badElement = stack.pop();
-		while(!stack2.isEmpty()) {
+		while (!stack2.isEmpty()) {
 			stack.push(stack2.pop());
 		}
 		return badElement;
